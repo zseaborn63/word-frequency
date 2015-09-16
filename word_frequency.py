@@ -1,21 +1,19 @@
-# Normal Mode Complete
+# Simpler form
 
 with open("sample.txt") as infile:
     book = infile.read()
     
 import string
     
-def remove_punctuation_and_lines(x):
-    x = x.lower()
+def word_frequency(file):
+    file = file.lower()
     for c in string.punctuation:
-        x = x.replace(c, "")
+        file = file.replace(c, "")
     for c in string.whitespace:
-        x = x.replace(c, " ")
-    return x
-
-def word_dictionary(x):
+        file = file.replace(c, " ")
+    word = file.split()
     word_dict = {}
-    for word in x:
+    for word in word:
         if word in word_dict.keys():
             word_dict[word] += 1
         else:
