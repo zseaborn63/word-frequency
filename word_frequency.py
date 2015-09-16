@@ -29,10 +29,8 @@ def sort_list(a_list, how_many):
     for word, appears in sorted_list:
         print("{} {}".format(word, appears))
 
-only_words = remove_punctuation_and_lines(book)
-listed_words = only_words.split()
-unsorted_mess = word_dictionary(listed_words)
+unsorted_mess = word_frequency(book)
 word_list = word_list(unsorted_mess)
-sort_list(word_list, 5)
+sort_list(word_list, 20)
 
 
